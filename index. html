@@ -1,0 +1,2009 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>
+    Areca Palm Products
+</title>
+
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+:root{
+
+    --green:#087f23;
+    --dark:#064d18;
+    --light:#effaf1;
+    --yellow:#f5c542;
+    --white:#ffffff;
+    --text:#18231b;
+    --gray:#68736b;
+    --shadow:0 10px 30px rgba(0,0,0,.10);
+
+}
+
+body{
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:#f7fbf8;
+
+    color:var(--text);
+
+}
+
+
+/* ================= NAVIGATION ================= */
+
+.navbar{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    padding:15px 6%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:white;
+
+    transition:.3s;
+
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+
+}
+
+.navbar.scrolled{
+
+    background:var(--dark);
+
+    padding:10px 6%;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    color:var(--green);
+
+}
+
+.navbar.scrolled .logo{
+
+    color:white;
+
+}
+
+.logo-icon{
+
+    font-size:32px;
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:20px;
+
+}
+
+.nav-links a{
+
+    color:var(--text);
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.navbar.scrolled .nav-links a{
+
+    color:white;
+
+}
+
+.nav-links a:hover{
+
+    color:var(--yellow);
+
+}
+
+.menu{
+
+    display:none;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+}
+
+
+/* ================= HERO ================= */
+
+.hero{
+
+    min-height:100vh;
+
+    padding:150px 7% 80px;
+
+    display:flex;
+
+    align-items:center;
+
+    background:
+
+    linear-gradient(
+        90deg,
+        rgba(0,60,20,.90),
+        rgba(0,100,30,.65)
+    ),
+
+    url(
+        "https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1800&q=80"
+    );
+
+    background-size:cover;
+
+    background-position:center;
+
+    color:white;
+
+}
+
+.hero-content{
+
+    max-width:750px;
+
+}
+
+.hero h1{
+
+    font-size:
+        clamp(42px,7vw,78px);
+
+    line-height:1.05;
+
+    margin-bottom:25px;
+
+}
+
+.hero h1 span{
+
+    color:var(--yellow);
+
+}
+
+.hero p{
+
+    font-size:20px;
+
+    line-height:1.7;
+
+    margin-bottom:30px;
+
+}
+
+.buttons{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+.btn{
+
+    padding:14px 25px;
+
+    border-radius:30px;
+
+    border:none;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+    text-decoration:none;
+
+    display:inline-block;
+
+}
+
+.btn-primary{
+
+    background:var(--yellow);
+
+    color:#222;
+
+}
+
+.btn-green{
+
+    background:var(--green);
+
+    color:white;
+
+}
+
+
+/* ================= SECTIONS ================= */
+
+section{
+
+    padding:90px 7%;
+
+}
+
+.title{
+
+    text-align:center;
+
+    margin-bottom:45px;
+
+}
+
+.title h2{
+
+    color:var(--dark);
+
+    font-size:38px;
+
+    margin-bottom:10px;
+
+}
+
+.title p{
+
+    color:var(--gray);
+
+}
+
+
+/* ================= CARDS ================= */
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(240px,1fr));
+
+    gap:25px;
+
+}
+
+.card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:
+        translateY(-7px);
+
+}
+
+.icon{
+
+    font-size:45px;
+
+    margin-bottom:15px;
+
+}
+
+.card h3{
+
+    color:var(--dark);
+
+    margin-bottom:10px;
+
+}
+
+.card p{
+
+    color:var(--gray);
+
+    line-height:1.6;
+
+}
+
+
+/* ================= WEATHER ================= */
+
+.weather{
+
+    background:var(--light);
+
+}
+
+.weather-controls{
+
+    max-width:600px;
+
+    margin:auto;
+
+    display:flex;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:30px;
+
+}
+
+select{
+
+    flex:1;
+
+    min-width:220px;
+
+    padding:14px;
+
+    border-radius:10px;
+
+    border:1px solid #ccd8ce;
+
+    font-size:16px;
+
+}
+
+.weather-card{
+
+    max-width:800px;
+
+    margin:auto;
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:35px;
+
+    box-shadow:var(--shadow);
+
+    text-align:center;
+
+}
+
+.weather-icon{
+
+    font-size:65px;
+
+    margin:15px;
+
+}
+
+.temperature{
+
+    font-size:55px;
+
+    color:var(--green);
+
+    font-weight:bold;
+
+}
+
+.weather-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(130px,1fr));
+
+    gap:15px;
+
+    margin-top:30px;
+
+}
+
+.weather-item{
+
+    background:var(--light);
+
+    padding:18px;
+
+    border-radius:12px;
+
+}
+
+.weather-item b{
+
+    display:block;
+
+    margin-top:7px;
+
+}
+
+
+/* ================= MARKET ================= */
+
+.market-search{
+
+    max-width:500px;
+
+    margin:0 auto 30px;
+
+}
+
+.market-search input{
+
+    width:100%;
+
+    padding:15px;
+
+    border:1px solid #ccd8ce;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+}
+
+.table-wrapper{
+
+    overflow-x:auto;
+
+    background:white;
+
+    box-shadow:var(--shadow);
+
+    border-radius:15px;
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+th,td{
+
+    padding:16px;
+
+    text-align:left;
+
+    border-bottom:1px solid #eee;
+
+}
+
+th{
+
+    background:var(--dark);
+
+    color:white;
+
+}
+
+.no-data{
+
+    color:#c77b00;
+
+    font-weight:bold;
+
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact{
+
+    background:var(--light);
+
+}
+
+.contact-box{
+
+    max-width:700px;
+
+    margin:auto;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.contact-box input,
+.contact-box textarea{
+
+    width:100%;
+
+    padding:14px;
+
+    margin-bottom:15px;
+
+    border:1px solid #ccd8ce;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+}
+
+.contact-box textarea{
+
+    height:150px;
+
+    resize:vertical;
+
+}
+
+
+/* ================= FOOTER ================= */
+
+footer{
+
+    background:#04290d;
+
+    color:white;
+
+    text-align:center;
+
+    padding:45px 7%;
+
+}
+
+footer p{
+
+    margin:10px;
+
+    color:#cbd8ce;
+
+}
+
+footer a{
+
+    color:white;
+
+    text-decoration:none;
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+    .menu{
+
+        display:block;
+
+        color:var(--green);
+
+    }
+
+    .navbar.scrolled .menu{
+
+        color:white;
+
+    }
+
+    .nav-links{
+
+        position:absolute;
+
+        top:70px;
+
+        left:-100%;
+
+        width:100%;
+
+        background:white;
+
+        flex-direction:column;
+
+        text-align:center;
+
+        padding:25px;
+
+        transition:.3s;
+
+    }
+
+    .nav-links.active{
+
+        left:0;
+
+    }
+
+    .navbar.scrolled .nav-links{
+
+        background:var(--dark);
+
+    }
+
+    .navbar.scrolled .nav-links a{
+
+        color:white;
+
+    }
+
+    .hero{
+
+        text-align:center;
+
+    }
+
+    .buttons{
+
+        justify-content:center;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<nav
+    class="navbar"
+    id="navbar"
+>
+
+    <div class="logo">
+
+        <span class="logo-icon">
+            🌴
+        </span>
+
+        <span>
+            Areca Palm Products
+        </span>
+
+    </div>
+
+
+    <div
+        class="menu"
+        id="menu"
+    >
+        ☰
+    </div>
+
+
+    <ul
+        class="nav-links"
+        id="navLinks"
+    >
+
+        <li>
+            <a href="#home">
+                Home
+            </a>
+        </li>
+
+        <li>
+            <a href="#plants">
+                Plants
+            </a>
+        </li>
+
+        <li>
+            <a href="#fertilizers">
+                Fertilizers
+            </a>
+        </li>
+
+        <li>
+            <a href="#pesticides">
+                Pesticides
+            </a>
+        </li>
+
+        <li>
+            <a href="#diseases">
+                Diseases
+            </a>
+        </li>
+
+        <li>
+            <a href="#market">
+                Today's Price
+            </a>
+        </li>
+
+        <li>
+            <a href="#weather">
+                Weather
+            </a>
+        </li>
+
+        <li>
+            <a href="#contact">
+                Contact
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+<!-- ================= HOME ================= -->
+
+<section
+    class="hero"
+    id="home"
+>
+
+    <div class="hero-content">
+
+        <h1>
+
+            Smart Farming with
+
+            <span>
+                Areca Palm
+            </span>
+
+        </h1>
+
+        <p>
+
+            Areca Palm Products is a farmer-focused
+            information portal for plants, fertilizers,
+            pesticides, diseases, market prices and
+            live weather information.
+
+        </p>
+
+
+        <div class="buttons">
+
+            <a
+                href="#market"
+                class="btn btn-primary"
+            >
+                📈 Today's Price
+            </a>
+
+            <a
+                href="#weather"
+                class="btn btn-primary"
+            >
+                🌦️ Live Weather
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PLANTS ================= -->
+
+<section id="plants">
+
+    <div class="title">
+
+        <h2>
+            🌱 Areca Palm Plants
+        </h2>
+
+        <p>
+            Information for healthy arecanut plantation management.
+        </p>
+
+    </div>
+
+
+    <div class="grid">
+
+        <div class="card">
+
+            <div class="icon">
+                🌱
+            </div>
+
+            <h3>
+                Seed Selection
+            </h3>
+
+            <p>
+                Choose healthy and suitable planting material
+                from reliable sources.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">
+                🌴
+            </div>
+
+            <h3>
+                Plantation
+            </h3>
+
+            <p>
+                Learn about spacing, planting, shade,
+                drainage and farm preparation.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">
+                💧
+            </div>
+
+            <h3>
+                Irrigation
+            </h3>
+
+            <p>
+                Manage irrigation according to crop stage,
+                soil and rainfall conditions.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">
+                🌾
+            </div>
+
+            <h3>
+                Farm Management
+            </h3>
+
+            <p>
+                Information about soil management,
+                mulching and weed management.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FERTILIZERS ================= -->
+
+<section
+    id="fertilizers"
+    class="weather"
+>
+
+    <div class="title">
+
+        <h2>
+            🧪 Fertilizers
+        </h2>
+
+        <p>
+            Nutrient and fertilizer information.
+        </p>
+
+    </div>
+
+
+    <div class="grid">
+
+        <div class="card">
+
+            <div class="icon">
+                🟢
+            </div>
+
+            <h3>
+                NPK
+            </h3>
+
+            <p>
+                Nitrogen, phosphorus and potassium
+                support different aspects of plant growth.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">
+                ♻️
+            </div>
+
+            <h3>
+                Organic Inputs
+            </h3>
+
+            <p>
+                Compost and organic matter can help improve
+                soil structure and fertility.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">
+                🔬
+            </div>
+
+            <h3>
+                Micronutrients
+            </h3>
+
+            <p>
+                Micronutrient requirements should preferably
+                be determined through soil and crop assessment.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PESTICIDES ================= -->
+
+<section id="pesticides">
+
+    <div class="title">
+
+        <h2>
+            🐛 Pesticides & Pest Management
+        </h2>
+
+        <p>
+            Pest identification and safe crop protection.
+        </p>
+
+    </div>
+
+
+    <div class="grid">
+
+        <div class="card">
+
+            <div class="icon">
+                🐛
+            </div>
+
+            <h3>
+                Pest Identification
+            </h3>
+
+            <p>
+                Identify common pest symptoms before selecting
+                a control method.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">
+                ♻️
+            </div>
+
+            <h3>
+                Integrated Pest Management
+            </h3>
+
+            <p>
+                Combine monitoring, cultural, biological and
+                chemical approaches where appropriate.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">
+                ⚠️
+            </div>
+
+            <h3>
+                Safe Use
+            </h3>
+
+            <p>
+                Always follow the registered product label,
+                dose, PPE and safety instructions.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= DISEASES ================= -->
+
+<section
+    id="diseases"
+    class="weather"
+>
+
+    <div class="title">
+
+        <h2>
+            🦠 Diseases
+        </h2>
+
+        <p>
+            Identify symptoms early and seek expert advice.
+        </p>
+
+    </div>
+
+
+    <div class="grid">
+
+        <div class="card">
+
+            <div class="icon">
+                🍂
+            </div>
+
+            <h3>
+                Leaf Symptoms
+            </h3>
+
+            <p>
+                Yellowing, drying and leaf spots may have
+                several possible causes.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">
+                🌴
+            </div>
+
+            <h3>
+                Fruit Problems
+            </h3>
+
+            <p>
+                Monitor nuts for unusual rotting, discoloration
+                and other symptoms.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">
+                💧
+            </div>
+
+            <h3>
+                Root Problems
+            </h3>
+
+            <p>
+                Poor drainage and unsuitable soil conditions
+                can affect plant health.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">
+                🔬
+            </div>
+
+            <h3>
+                Expert Diagnosis
+            </h3>
+
+            <p>
+                Serious or unusual disease outbreaks should
+                be checked by an agricultural expert.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MARKET ================= -->
+
+<section id="market">
+
+    <div class="title">
+
+        <h2>
+            📈 Today's Arecanut Market Price
+        </h2>
+
+        <p>
+            Market data should come from an official live data source.
+        </p>
+
+    </div>
+
+
+    <div class="market-search">
+
+        <input
+            type="text"
+            id="marketSearch"
+            placeholder="Search district or market..."
+        >
+
+    </div>
+
+
+    <div class="table-wrapper">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        District
+                    </th>
+
+                    <th>
+                        Market
+                    </th>
+
+                    <th>
+                        Commodity
+                    </th>
+
+                    <th>
+                        Min
+                    </th>
+
+                    <th>
+                        Max
+                    </th>
+
+                    <th>
+                        Modal
+                    </th>
+
+                    <th>
+                        Status
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="marketBody">
+
+                <tr>
+
+                    <td colspan="7">
+                        Loading...
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+<!-- ================= WEATHER ================= -->
+
+<section
+    id="weather"
+    class="weather"
+>
+
+    <div class="title">
+
+        <h2>
+            🌦️ Present Weather
+        </h2>
+
+        <p>
+            Select any Karnataka district.
+        </p>
+
+    </div>
+
+
+    <div class="weather-controls">
+
+        <select
+            id="districtSelect"
+        >
+
+            <option>
+                Loading districts...
+            </option>
+
+        </select>
+
+
+        <button
+            class="btn btn-green"
+            onclick="loadWeather()"
+        >
+            Update
+        </button>
+
+    </div>
+
+
+    <div
+        class="weather-card"
+        id="weatherCard"
+    >
+
+        Loading weather...
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section
+    id="contact"
+    class="contact"
+>
+
+    <div class="title">
+
+        <h2>
+            📧 Contact Us
+        </h2>
+
+        <p>
+            Areca Palm Products
+        </p>
+
+    </div>
+
+
+    <div class="contact-box">
+
+        <input
+            type="text"
+            id="contactName"
+            placeholder="Your name"
+        >
+
+
+        <input
+            type="email"
+            id="contactEmail"
+            placeholder="Your email"
+        >
+
+
+        <textarea
+            id="contactMessage"
+            placeholder="Your message"
+        ></textarea>
+
+
+        <button
+            class="btn btn-green"
+            onclick="sendContact()"
+        >
+            Send Message
+        </button>
+
+
+        <p style="margin-top:20px">
+
+            Email:
+
+            <a
+                href="mailto:areca@gmail.com"
+            >
+                areca@gmail.com
+            </a>
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <h2>
+        🌴 Areca Palm Products
+    </h2>
+
+    <p>
+        Smart Agriculture Information Portal
+    </p>
+
+    <p>
+        Plants • Fertilizers • Pesticides • Diseases •
+        Markets • Weather
+    </p>
+
+    <p>
+        Email:
+        <a href="mailto:areca@gmail.com">
+            areca@gmail.com
+        </a>
+    </p>
+
+    <p>
+        © <span id="year"></span>
+        Areca Palm Products
+    </p>
+
+</footer>
+
+
+<script>
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+const navbar =
+    document.getElementById("navbar");
+
+window.addEventListener(
+    "scroll",
+    () => {
+
+        if(window.scrollY > 50){
+
+            navbar.classList.add("scrolled");
+
+        }else{
+
+            navbar.classList.remove("scrolled");
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+const menu =
+    document.getElementById("menu");
+
+const navLinks =
+    document.getElementById("navLinks");
+
+menu.addEventListener(
+    "click",
+    () => {
+
+        navLinks.classList.toggle("active");
+
+    }
+);
+
+
+/* =====================================================
+   WEATHER DESCRIPTION
+===================================================== */
+
+function weatherDescription(code){
+
+    if(code === 0)
+        return ["☀️","Clear sky"];
+
+    if(code <= 3)
+        return ["🌤️","Partly cloudy"];
+
+    if(code <= 48)
+        return ["🌫️","Fog"];
+
+    if(code <= 57)
+        return ["🌦️","Drizzle"];
+
+    if(code <= 67)
+        return ["🌧️","Rain"];
+
+    if(code <= 82)
+        return ["🌧️","Rain showers"];
+
+    if(code <= 86)
+        return ["🌨️","Snow showers"];
+
+    if(code >= 95)
+        return ["⛈️","Thunderstorm"];
+
+    return ["🌤️","Variable weather"];
+
+}
+
+
+/* =====================================================
+   LOAD DISTRICTS
+===================================================== */
+
+async function loadDistricts(){
+
+    try{
+
+        const response =
+            await fetch("/api/districts");
+
+        const districts =
+            await response.json();
+
+        const select =
+            document.getElementById(
+                "districtSelect"
+            );
+
+        select.innerHTML = "";
+
+        districts.forEach(
+            (district,index) => {
+
+                const option =
+                    document.createElement(
+                        "option"
+                    );
+
+                option.value =
+                    `${district.lat},${district.lon}`;
+
+                option.dataset.name =
+                    district.name;
+
+                option.textContent =
+                    district.name;
+
+                select.appendChild(option);
+
+            }
+        );
+
+        await loadWeather();
+
+    }
+
+    catch(error){
+
+        console.error(error);
+
+    }
+
+}
+
+
+/* =====================================================
+   LOAD WEATHER
+===================================================== */
+
+async function loadWeather(){
+
+    const select =
+        document.getElementById(
+            "districtSelect"
+        );
+
+    const option =
+        select.options[
+            select.selectedIndex
+        ];
+
+    if(!option)
+        return;
+
+    const [lat,lon] =
+        option.value.split(",");
+
+    const name =
+        option.dataset.name;
+
+    const card =
+        document.getElementById(
+            "weatherCard"
+        );
+
+    card.innerHTML =
+        "Loading latest weather...";
+
+
+    try{
+
+        const response =
+            await fetch(
+                `/api/weather?lat=${lat}&lon=${lon}`
+            );
+
+        const data =
+            await response.json();
+
+        if(data.error)
+            throw new Error(data.error);
+
+
+        const current =
+            data.current;
+
+        const weather =
+            weatherDescription(
+                current.weather_code
+            );
+
+
+        card.innerHTML = `
+
+            <h2>
+                ${name}
+            </h2>
+
+            <div class="weather-icon">
+                ${weather[0]}
+            </div>
+
+            <div class="temperature">
+                ${Math.round(
+                    current.temperature_2m
+                )}°C
+            </div>
+
+            <p>
+                ${weather[1]}
+            </p>
+
+
+            <div class="weather-grid">
+
+                <div class="weather-item">
+                    💧 Humidity
+                    <b>
+                        ${current.relative_humidity_2m}%
+                    </b>
+                </div>
+
+                <div class="weather-item">
+                    🌡️ Feels Like
+                    <b>
+                        ${Math.round(
+                            current.apparent_temperature
+                        )}°C
+                    </b>
+                </div>
+
+                <div class="weather-item">
+                    🌧️ Rain
+                    <b>
+                        ${current.precipitation} mm
+                    </b>
+                </div>
+
+                <div class="weather-item">
+                    💨 Wind
+                    <b>
+                        ${Math.round(
+                            current.wind_speed_10m
+                        )} km/h
+                    </b>
+                </div>
+
+                <div class="weather-item">
+                    📅 Updated
+                    <b>
+                        ${current.time.replace(
+                            "T",
+                            " "
+                        )}
+                    </b>
+                </div>
+
+            </div>
+
+        `;
+
+    }
+
+    catch(error){
+
+        card.innerHTML = `
+
+            <h3>
+                Weather unavailable
+            </h3>
+
+            <p>
+                Please try again.
+            </p>
+
+        `;
+
+        console.error(error);
+
+    }
+
+}
+
+
+/* =====================================================
+   LOAD MARKET
+===================================================== */
+
+async function loadMarket(){
+
+    const body =
+        document.getElementById(
+            "marketBody"
+        );
+
+    try{
+
+        const response =
+            await fetch(
+                "/api/market-prices"
+            );
+
+        const result =
+            await response.json();
+
+        body.innerHTML = "";
+
+        result.data.forEach(
+            item => {
+
+                const row =
+                    document.createElement(
+                        "tr"
+                    );
+
+                row.innerHTML = `
+
+                    <td>
+                        ${item.district}
+                    </td>
+
+                    <td>
+                        ${item.market}
+                    </td>
+
+                    <td>
+                        ${item.commodity}
+                    </td>
+
+                    <td>
+                        ${
+                            item.min === null
+                            ? "-"
+                            : "₹" + item.min
+                        }
+                    </td>
+
+                    <td>
+                        ${
+                            item.max === null
+                            ? "-"
+                            : "₹" + item.max
+                        }
+                    </td>
+
+                    <td>
+                        ${
+                            item.modal === null
+                            ? "-"
+                            : "₹" + item.modal
+                        }
+                    </td>
+
+                    <td class="no-data">
+                        ${item.status}
+                    </td>
+
+                `;
+
+                body.appendChild(row);
+
+            }
+        );
+
+    }
+
+    catch(error){
+
+        body.innerHTML = `
+
+            <tr>
+
+                <td colspan="7">
+                    Market data unavailable.
+                </td>
+
+            </tr>
+
+        `;
+
+    }
+
+}
+
+
+/* =====================================================
+   MARKET SEARCH
+===================================================== */
+
+document
+    .getElementById("marketSearch")
+    .addEventListener(
+        "input",
+        function(){
+
+            const search =
+                this.value.toLowerCase();
+
+            document
+                .querySelectorAll(
+                    "#marketBody tr"
+                )
+                .forEach(
+                    row => {
+
+                        row.style.display =
+                            row.innerText
+                            .toLowerCase()
+                            .includes(search)
+                            ? ""
+                            : "none";
+
+                    }
+                );
+
+        }
+    );
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+async function sendContact(){
+
+    const name =
+        document.getElementById(
+            "contactName"
+        ).value;
+
+    const email =
+        document.getElementById(
+            "contactEmail"
+        ).value;
+
+    const message =
+        document.getElementById(
+            "contactMessage"
+        ).value;
+
+
+    if(!name || !email || !message){
+
+        alert(
+            "Please fill all fields."
+        );
+
+        return;
+
+    }
+
+
+    try{
+
+        const response =
+            await fetch(
+                "/api/contact",
+                {
+
+                    method:"POST",
+
+                    headers:{
+                        "Content-Type":
+                            "application/json"
+                    },
+
+                    body:JSON.stringify({
+
+                        name,
+                        email,
+                        message
+
+                    })
+
+                }
+            );
+
+
+        const result =
+            await response.json();
+
+
+        alert(
+            result.message
+        );
+
+
+        if(result.success){
+
+            document
+                .getElementById(
+                    "contactName"
+                ).value = "";
+
+            document
+                .getElementById(
+                    "contactEmail"
+                ).value = "";
+
+            document
+                .getElementById(
+                    "contactMessage"
+                ).value = "";
+
+        }
+
+    }
+
+    catch(error){
+
+        alert(
+            "Unable to send message."
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   INITIALIZE
+===================================================== */
+
+document.getElementById(
+    "year"
+).textContent =
+    new Date().getFullYear();
+
+
+loadDistricts();
+
+loadMarket();
+
+
+/* =====================================================
+   AUTOMATIC WEATHER UPDATE
+   Every 30 minutes
+===================================================== */
+
+setInterval(
+    () => {
+
+        loadWeather();
+
+    },
+    30 * 60 * 1000
+);
+
+
+/* =====================================================
+   AUTOMATIC MARKET REFRESH
+   Every 30 minutes
+===================================================== */
+
+setInterval(
+    () => {
+
+        loadMarket();
+
+    },
+    30 * 60 * 1000
+);
+
+</script>
+
+
+</body>
+
+</html>
