@@ -1,4 +1,4 @@
-# -SCT_WD_2-
+
 # 🌴 Areca Palm Products
 
 A simple and responsive agriculture information website designed for Areca Palm farmers.
